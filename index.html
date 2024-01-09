@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Automated Reminders Setup</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Automated Reminders Setup</h1>
+        <form id="reminderForm">
+            <label for="reminderTime">Reminder Time:</label>
+            <input type="time" id="reminderTime" required>
+
+            <label for="reminderChannels">Reminder Channels:</label>
+            <select id="reminderChannels" multiple>
+                <option value="text">Text</option>
+                <option value="email">Email</option>
+                <option value="call">Call</option>
+            </select>
+
+            <label for="patientType">Patient Type:</label>
+            <select id="patientType">
+                <option value="new">New Patient</option>
+                <option value="old">Old Patient</option>
+            </select>
+
+            <label for="visitType">Visit Type:</label>
+            <select id="visitType">
+                <option value="general">General Visit</option>
+                <option value="corona">corona Visit</option>
+                <option value="follow-up">Follow-up Visit</option>
+            </select>
+
+            <label for="reminderMessage">Reminder Message:</label>
+            <textarea id="reminderMessage" rows="4" placeholder="Enter reminder message"></textarea>
+
+            <button type="button" onclick="setupReminder()">Setup Reminder</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
